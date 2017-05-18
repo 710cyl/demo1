@@ -1,6 +1,6 @@
 ﻿namespace LogisticsSystem
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("组织机构");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("角色");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("用户");
