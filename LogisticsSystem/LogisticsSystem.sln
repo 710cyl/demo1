@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticsSystem", "LogisticsSystem\LogisticsSystem.csproj", "{6205B4F1-C98A-4B12-9A6D-D179550C9F2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticSystemServer", "LogisticSystemServer\LogisticSystemServer.csproj", "{C90CC4FE-4F3F-4CC7-847B-D211738800F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6205B4F1-C98A-4B12-9A6D-D179550C9F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6205B4F1-C98A-4B12-9A6D-D179550C9F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6205B4F1-C98A-4B12-9A6D-D179550C9F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C90CC4FE-4F3F-4CC7-847B-D211738800F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C90CC4FE-4F3F-4CC7-847B-D211738800F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C90CC4FE-4F3F-4CC7-847B-D211738800F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C90CC4FE-4F3F-4CC7-847B-D211738800F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

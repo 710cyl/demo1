@@ -10,14 +10,18 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
+using System.Net;
+using System.Net.Sockets;
 
 namespace LogisticsSystem
 {
     public partial class FormLogIn : Form
     {
-        static string constr = "server=localhost;User Id=root;password=root;Database=test";
-        MySqlConnection mycon = new MySqlConnection(constr);
-        MySqlCommand sqlcmd = new MySqlCommand();
+        //static string constr = "server=localhost;User Id=root;password=root;Database=test";
+        //MySqlConnection mycon = new MySqlConnection(constr);
+        //MySqlCommand sqlcmd = new MySqlCommand();
+
+        
         public FormLogIn()
         {
             InitializeComponent();
@@ -115,18 +119,34 @@ namespace LogisticsSystem
 
             }
 
-            if (mycon.State == ConnectionState.Open)
-            {
-                mycon.Close();
-            }
+            //if (mycon.State == ConnectionState.Open)
+            //{
+            //    mycon.Close();
+            //}
 
-            mycon.Open();
-            sqlcmd.CommandText = "select authorities from test.customer where idcustomers='"
+            //mycon.Open();
+            //sqlcmd.CommandText = "select authorities from test.customer where idcustomers='"
+            //    + this.textBoxId.Text + "'and passwrdcustomsers='" + this.textBoxPswd.Text + "'";
+            //sqlcmd.Connection = mycon;
+            //MySqlDataReader sqlDr = sqlcmd.ExecuteReader();
+
+            Socket tcpClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPAddress ipaddress = IPAddress.Parse("127.0.0.1");
+            EndPoint point = new IPEndPoint(ipaddress, 7788);
+            tcpClient.Connect(point);
+
+            string messageToServer = "select authorities from test.customer where idcustomers='"
                 + this.textBoxId.Text + "'and passwrdcustomsers='" + this.textBoxPswd.Text + "'";
-            sqlcmd.Connection = mycon;
-            MySqlDataReader sqlDr = sqlcmd.ExecuteReader();
+            tcpClient.Send(Encoding.UTF8.GetBytes(messageToServer));
 
-            if (sqlDr.Read())
+           
+            byte[] data = new byte[1000];
+            int length = tcpClient.Receive(data);
+            string message = Encoding.UTF8.GetString(data,0,length);
+
+
+
+            if (message.Equals("true"))
             {
                 MessageBox.Show("欢迎来到XX物流管理");
                 this.Hide();
