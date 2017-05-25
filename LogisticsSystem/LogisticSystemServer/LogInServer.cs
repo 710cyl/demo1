@@ -21,6 +21,7 @@ namespace LogisticSystemServer
         {
             InitializeComponent();
             socketServer();
+         
         }
 
         private void socketServer()
@@ -42,37 +43,37 @@ namespace LogisticSystemServer
             tcpServer.Listen(100);//设置最大的连接数
 
             Socket ClientSocket = tcpServer.Accept();
+          
+                //使用返回的socket向客户端发送消息
+                string isLogIn = "false";
 
-            //使用返回的socket向客户端发送消息
-            string isLogIn = "false";
-           
 
-            if (mycon.State == ConnectionState.Open)
-            {
-                mycon.Close();
-            }
+                if (mycon.State == ConnectionState.Open)
+                {
+                    mycon.Close();
+                }
 
-            mycon.Open();
+                mycon.Open();
 
-            byte[] data = new byte[1000];
-            int length = ClientSocket.Receive(data);
-            string receiveMsg = Encoding.UTF8.GetString(data, 0, length);
-            sqlcmd.CommandText = receiveMsg;
-            sqlcmd.Connection = mycon;
-            MySqlDataReader sqlDr = sqlcmd.ExecuteReader();
+                byte[] data = new byte[1000];
+                int length = ClientSocket.Receive(data);
+                string receiveMsg = Encoding.UTF8.GetString(data, 0, length);
+                sqlcmd.CommandText = receiveMsg;
+                sqlcmd.Connection = mycon;
+                MySqlDataReader sqlDr = sqlcmd.ExecuteReader();
 
-            if (sqlDr.Read())
-            {
-                isLogIn = "true";
-            }
+                if (sqlDr.Read())
+                {
+                    isLogIn = "true";
+                }
 
-            else
-                isLogIn = "false";
+                else
+                    isLogIn = "false";
 
-            byte[] str = Encoding.UTF8.GetBytes(isLogIn);
+                byte[] str = Encoding.UTF8.GetBytes(isLogIn);
 
-            ClientSocket.Send(str);
-
+                ClientSocket.Send(str);
+            
             
         }
 

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
+using WebSocketSharp;
+using System.Threading;
+using WebSocketSharp.Server;
 using System.Net;
 using System.Net.Sockets;
 
@@ -17,10 +20,6 @@ namespace LogisticsSystem
 {
     public partial class FormLogIn : Form
     {
-        //static string constr = "server=localhost;User Id=root;password=root;Database=test";
-        //MySqlConnection mycon = new MySqlConnection(constr);
-        //MySqlCommand sqlcmd = new MySqlCommand();
-
         
         public FormLogIn()
         {
@@ -103,8 +102,12 @@ namespace LogisticsSystem
         {
             this.pictureBox4.Image = Image.FromFile(Application.StartupPath + "/登录按钮1.1.png");
         }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void logInServer()
+        {
+           
+        }
+    
+        private void pictureBox4_Click(object sender1, EventArgs e1)
         {
             if (textBoxId.Text == "")
             {
@@ -119,46 +122,32 @@ namespace LogisticsSystem
 
             }
 
-            //if (mycon.State == ConnectionState.Open)
-            //{
-            //    mycon.Close();
-            //}
-
-            //mycon.Open();
-            //sqlcmd.CommandText = "select authorities from test.customer where idcustomers='"
-            //    + this.textBoxId.Text + "'and passwrdcustomsers='" + this.textBoxPswd.Text + "'";
-            //sqlcmd.Connection = mycon;
-            //MySqlDataReader sqlDr = sqlcmd.ExecuteReader();
-
-            Socket tcpClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPAddress ipaddress = IPAddress.Parse("127.0.0.1");
-            EndPoint point = new IPEndPoint(ipaddress, 7788);
-            tcpClient.Connect(point);
-
             string messageToServer = "select authorities from test.customer where idcustomers='"
-                + this.textBoxId.Text + "'and passwrdcustomsers='" + this.textBoxPswd.Text + "'";
-            tcpClient.Send(Encoding.UTF8.GetBytes(messageToServer));
+                    + this.textBoxId.Text + "'and passwrdcustomsers='" + this.textBoxPswd.Text + "'";
 
-           
-            byte[] data = new byte[1000];
-            int length = tcpClient.Receive(data);
-            string message = Encoding.UTF8.GetString(data,0,length);
+            
 
-
-
-            if (message.Equals("true"))
+            using (var ws = new WebSocket("ws://localhost:9000/LogIn"))
             {
-                MessageBox.Show("欢迎来到XX物流管理");
-                this.Hide();
+                ws.Connect();
+                ws.Send(messageToServer);
+                string message = "";
+                ws.OnMessage += (sender, e) =>
+                         message = e.Data;
+                Thread.Sleep(500);
+                        if (message.Equals("true"))
+                        {
+                            MessageBox.Show("欢迎来到XX物流管理");
+                            this.Hide();
 
-                FormMain formMain = new FormMain();
-                formMain.Show();
+                            FormMain formMain = new FormMain();
+                            formMain.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("用户名、密码、登录类型不匹配，请重试！", "【提示】");
+                        }
             }
-            else
-            {
-                MessageBox.Show("用户名、密码、登录类型不匹配，请重试！", "【提示】");
-            }
-
         }
     }
     
