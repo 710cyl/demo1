@@ -86,6 +86,7 @@
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.toolStripSeparator1,
@@ -101,7 +102,7 @@
             this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1255, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1673, 27);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -126,118 +127,118 @@
             this.toolStripDropDownButton1.Image = global::Demo1._1._3.Properties.Resources.suggestion_16x16;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(61, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(73, 24);
             this.toolStripDropDownButton1.Text = "操作";
             // 
             // FindToolStripMenuItem
             // 
             this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
-            this.FindToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.FindToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.FindToolStripMenuItem.Text = "查找";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(186, 6);
             // 
             // CheckToolStripMenuItem
             // 
             this.CheckToolStripMenuItem.Name = "CheckToolStripMenuItem";
-            this.CheckToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.CheckToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.CheckToolStripMenuItem.Text = "查看";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(186, 6);
             // 
             // NewToolStripMenuItem
             // 
             this.NewToolStripMenuItem.Name = "NewToolStripMenuItem";
-            this.NewToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.NewToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.NewToolStripMenuItem.Text = "新建";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(189, 26);
             this.toolStripMenuItem2.Text = "修改";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(189, 26);
             this.toolStripMenuItem3.Text = "删除";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(186, 6);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(189, 26);
             this.toolStripMenuItem5.Text = "重存";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(186, 6);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(189, 26);
             this.toolStripMenuItem7.Text = "发布";
             // 
             // 表单详细信息ToolStripMenuItem
             // 
             this.表单详细信息ToolStripMenuItem.Name = "表单详细信息ToolStripMenuItem";
-            this.表单详细信息ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.表单详细信息ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.表单详细信息ToolStripMenuItem.Text = "表单详细信息";
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator12.Size = new System.Drawing.Size(186, 6);
             // 
             // 自定义数据显示ToolStripMenuItem
             // 
             this.自定义数据显示ToolStripMenuItem.Name = "自定义数据显示ToolStripMenuItem";
-            this.自定义数据显示ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.自定义数据显示ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.自定义数据显示ToolStripMenuItem.Text = "自定义数据显示";
             // 
             // 刷新ToolStripMenuItem
             // 
             this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
-            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.刷新ToolStripMenuItem.Text = "刷新";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton5
             // 
             this.toolStripButton5.Image = global::Demo1._1._3.Properties.Resources.open_16x16;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(52, 22);
+            this.toolStripButton5.Size = new System.Drawing.Size(63, 24);
             this.toolStripButton5.Text = "查看";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = global::Demo1._1._3.Properties.Resources.new_16x16;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(52, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripButton1.Text = "新建";
             // 
             // toolStripButton2
@@ -245,7 +246,7 @@
             this.toolStripButton2.Image = global::Demo1._1._3.Properties.Resources.edit_16x16;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(52, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(63, 24);
             this.toolStripButton2.Text = "修改";
             // 
             // toolStripButton4
@@ -253,26 +254,26 @@
             this.toolStripButton4.Image = global::Demo1._1._3.Properties.Resources.cancel_16x16;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(52, 22);
+            this.toolStripButton4.Size = new System.Drawing.Size(63, 24);
             this.toolStripButton4.Text = "删除";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton3
             // 
             this.toolStripButton3.Image = global::Demo1._1._3.Properties.Resources.issue_16x16;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(52, 22);
+            this.toolStripButton3.Size = new System.Drawing.Size(63, 24);
             this.toolStripButton3.Text = "发布";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripDropDownButton2
             // 
@@ -281,33 +282,34 @@
             this.toolStripDropDownButton2.Image = global::Demo1._1._3.Properties.Resources.documentmap_16x16;
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(61, 22);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(73, 24);
             this.toolStripDropDownButton2.Text = "相关";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(144, 26);
             this.toolStripMenuItem1.Text = "相关文档";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // tabPane1
             // 
             this.tabPane1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPane1.Controls.Add(this.tabNavigationPage1);
             this.tabPane1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPane1.Location = new System.Drawing.Point(0, 25);
+            this.tabPane1.Location = new System.Drawing.Point(0, 27);
+            this.tabPane1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPane1.Name = "tabPane1";
             this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage1});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1255, 554);
+            this.tabPane1.RegularSize = new System.Drawing.Size(1673, 697);
             this.tabPane1.SelectedPage = this.tabNavigationPage1;
             this.tabPane1.SelectedPageIndex = 0;
-            this.tabPane1.Size = new System.Drawing.Size(1255, 554);
+            this.tabPane1.Size = new System.Drawing.Size(1673, 697);
             this.tabPane1.TabIndex = 6;
             // 
             // tabNavigationPage1
@@ -316,16 +318,19 @@
             this.tabNavigationPage1.Appearance.Options.UseBackColor = true;
             this.tabNavigationPage1.Caption = "基础档案";
             this.tabNavigationPage1.Controls.Add(this.gridControl2);
+            this.tabNavigationPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1237, 508);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1651, 639);
             // 
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1237, 508);
+            this.gridControl2.Size = new System.Drawing.Size(1651, 639);
             this.gridControl2.TabIndex = 5;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -356,6 +361,8 @@
             // gridColumn9
             // 
             this.gridColumn9.Caption = "岗位设置";
+            this.gridColumn9.DisplayFormat.FormatString = "N";
+            this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn9.MaxWidth = 100;
             this.gridColumn9.MinWidth = 80;
             this.gridColumn9.Name = "gridColumn9";
@@ -502,12 +509,13 @@
             // 
             // Basic_Set
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabPane1);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Basic_Set";
-            this.Size = new System.Drawing.Size(1255, 579);
+            this.Size = new System.Drawing.Size(1673, 724);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabPane1.ResumeLayout(false);
