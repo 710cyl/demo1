@@ -120,4 +120,16 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="sqlDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>319, 17</value>
+  </metadata>
+  <data name="sqlDataSource2.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxWaWV3IE5hbWU9IuWGhemDqOi9pumYnyI+PEZpZWxkIE5hbWU9Iue8luWPtyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLovabpmJ8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i6L2m5Y+3IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuWPuOacuiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLor7TmmI4iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 17</value>
+  </metadata>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IuWGhemDqOi9pumYnyI+PEZpZWxkIE5hbWU9IumUgeeKtuaAgSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLnmbvorrDkuroiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i55m76K6w5pe26Ze0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuS/ruaUueS6uiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLkv67mlLnml7bpl7QiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
 </root>

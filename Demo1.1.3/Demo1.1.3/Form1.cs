@@ -37,6 +37,7 @@ namespace Demo1._1._3
         public Form1()
         {
             InitializeComponent();
+        
         }
 
         private void accordionControlElement1_Click(object sender, EventArgs e)
@@ -212,5 +213,7 @@ namespace Demo1._1._3
             panel2.Controls.Clear();
             panel2.Controls.Add(of);
         }
+
+   
     }
 }

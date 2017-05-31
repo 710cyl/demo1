@@ -28,6 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.DataAccess.Sql.TableQuery tableQuery1 = new DevExpress.DataAccess.Sql.TableQuery();
+            DevExpress.DataAccess.Sql.TableInfo tableInfo1 = new DevExpress.DataAccess.Sql.TableInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo1 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo2 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo3 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo4 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo5 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo6 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo7 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo8 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo9 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo10 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo11 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo12 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo13 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo14 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            DevExpress.DataAccess.Sql.ColumnInfo columnInfo15 = new DevExpress.DataAccess.Sql.ColumnInfo();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Basic_Set));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.FindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,28 +77,30 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.col编号 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col岗位设置 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col应收账款 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col应付账款 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col入库方式 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col出库方式 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col运输方式 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col岗位性质 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col借款性质 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col客户类型 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col费用类别 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col民族 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col仓库 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col报销类型 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col油气种类 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
             this.toolStrip1.SuspendLayout();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -317,195 +337,197 @@
             this.tabNavigationPage1.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.tabNavigationPage1.Appearance.Options.UseBackColor = true;
             this.tabNavigationPage1.Caption = "基础档案";
-            this.tabNavigationPage1.Controls.Add(this.gridControl2);
+            this.tabNavigationPage1.Controls.Add(this.gridControl1);
             this.tabNavigationPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
             this.tabNavigationPage1.Size = new System.Drawing.Size(1651, 639);
             // 
-            // gridControl2
+            // gridControl1
             // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl2.Location = new System.Drawing.Point(0, 0);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1651, 639);
-            this.gridControl2.TabIndex = 5;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.gridControl1.DataMember = "基本系统";
+            this.gridControl1.DataSource = this.sqlDataSource2;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1651, 639);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // gridView2
+            // sqlDataSource2
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn9,
-            this.gridColumn10,
-            this.gridColumn11,
-            this.gridColumn12,
-            this.gridColumn13,
-            this.gridColumn14,
-            this.gridColumn15,
-            this.gridColumn16,
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7});
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsBehavior.Editable = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.sqlDataSource2.ConnectionName = "localhost_test_Connection";
+            this.sqlDataSource2.Name = "sqlDataSource2";
+            tableQuery1.Name = "基本系统";
+            tableInfo1.Name = "基本系统";
+            columnInfo1.Name = "编号";
+            columnInfo2.Name = "岗位设置";
+            columnInfo3.Name = "应收账款";
+            columnInfo4.Name = "应付账款";
+            columnInfo5.Name = "入库方式";
+            columnInfo6.Name = "出库方式";
+            columnInfo7.Name = "运输方式";
+            columnInfo8.Name = "岗位性质";
+            columnInfo9.Name = "借款性质";
+            columnInfo10.Name = "客户类型";
+            columnInfo11.Name = "费用类别";
+            columnInfo12.Name = "民族";
+            columnInfo13.Name = "仓库";
+            columnInfo14.Name = "报销类型";
+            columnInfo15.Name = "油气种类";
+            tableInfo1.SelectedColumns.AddRange(new DevExpress.DataAccess.Sql.ColumnInfo[] {
+            columnInfo1,
+            columnInfo2,
+            columnInfo3,
+            columnInfo4,
+            columnInfo5,
+            columnInfo6,
+            columnInfo7,
+            columnInfo8,
+            columnInfo9,
+            columnInfo10,
+            columnInfo11,
+            columnInfo12,
+            columnInfo13,
+            columnInfo14,
+            columnInfo15});
+            tableQuery1.Tables.AddRange(new DevExpress.DataAccess.Sql.TableInfo[] {
+            tableInfo1});
+            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            tableQuery1});
+            this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
-            // gridColumn9
+            // gridView1
             // 
-            this.gridColumn9.Caption = "岗位设置";
-            this.gridColumn9.DisplayFormat.FormatString = "N";
-            this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn9.MaxWidth = 100;
-            this.gridColumn9.MinWidth = 80;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 0;
-            this.gridColumn9.Width = 83;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col编号,
+            this.col岗位设置,
+            this.col应收账款,
+            this.col应付账款,
+            this.col入库方式,
+            this.col出库方式,
+            this.col运输方式,
+            this.col岗位性质,
+            this.col借款性质,
+            this.col客户类型,
+            this.col费用类别,
+            this.col民族,
+            this.col仓库,
+            this.col报销类型,
+            this.col油气种类});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn10
+            // col编号
             // 
-            this.gridColumn10.Caption = "应收账款";
-            this.gridColumn10.MaxWidth = 100;
-            this.gridColumn10.MinWidth = 80;
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 1;
-            this.gridColumn10.Width = 80;
+            this.col编号.FieldName = "编号";
+            this.col编号.Name = "col编号";
+            this.col编号.Visible = true;
+            this.col编号.VisibleIndex = 0;
             // 
-            // gridColumn11
+            // col岗位设置
             // 
-            this.gridColumn11.Caption = "应付账款";
-            this.gridColumn11.MaxWidth = 100;
-            this.gridColumn11.MinWidth = 80;
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 2;
-            this.gridColumn11.Width = 80;
+            this.col岗位设置.FieldName = "岗位设置";
+            this.col岗位设置.Name = "col岗位设置";
+            this.col岗位设置.Visible = true;
+            this.col岗位设置.VisibleIndex = 1;
             // 
-            // gridColumn12
+            // col应收账款
             // 
-            this.gridColumn12.Caption = "入库方式";
-            this.gridColumn12.MaxWidth = 100;
-            this.gridColumn12.MinWidth = 80;
-            this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 3;
-            this.gridColumn12.Width = 80;
+            this.col应收账款.FieldName = "应收账款";
+            this.col应收账款.Name = "col应收账款";
+            this.col应收账款.Visible = true;
+            this.col应收账款.VisibleIndex = 2;
             // 
-            // gridColumn13
+            // col应付账款
             // 
-            this.gridColumn13.Caption = "出库方式";
-            this.gridColumn13.MaxWidth = 100;
-            this.gridColumn13.MinWidth = 80;
-            this.gridColumn13.Name = "gridColumn13";
-            this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 4;
-            this.gridColumn13.Width = 80;
+            this.col应付账款.FieldName = "应付账款";
+            this.col应付账款.Name = "col应付账款";
+            this.col应付账款.Visible = true;
+            this.col应付账款.VisibleIndex = 3;
             // 
-            // gridColumn14
+            // col入库方式
             // 
-            this.gridColumn14.Caption = "运输方式";
-            this.gridColumn14.MaxWidth = 100;
-            this.gridColumn14.MinWidth = 80;
-            this.gridColumn14.Name = "gridColumn14";
-            this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 5;
-            this.gridColumn14.Width = 82;
+            this.col入库方式.FieldName = "入库方式";
+            this.col入库方式.Name = "col入库方式";
+            this.col入库方式.Visible = true;
+            this.col入库方式.VisibleIndex = 4;
             // 
-            // gridColumn15
+            // col出库方式
             // 
-            this.gridColumn15.Caption = "岗位性质";
-            this.gridColumn15.MaxWidth = 100;
-            this.gridColumn15.MinWidth = 80;
-            this.gridColumn15.Name = "gridColumn15";
-            this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 6;
-            this.gridColumn15.Width = 80;
+            this.col出库方式.FieldName = "出库方式";
+            this.col出库方式.Name = "col出库方式";
+            this.col出库方式.Visible = true;
+            this.col出库方式.VisibleIndex = 5;
             // 
-            // gridColumn16
+            // col运输方式
             // 
-            this.gridColumn16.Caption = "借款性质";
-            this.gridColumn16.MaxWidth = 100;
-            this.gridColumn16.MinWidth = 80;
-            this.gridColumn16.Name = "gridColumn16";
-            this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 7;
-            this.gridColumn16.Width = 80;
+            this.col运输方式.FieldName = "运输方式";
+            this.col运输方式.Name = "col运输方式";
+            this.col运输方式.Visible = true;
+            this.col运输方式.VisibleIndex = 6;
             // 
-            // gridColumn1
+            // col岗位性质
             // 
-            this.gridColumn1.Caption = "客户类别";
-            this.gridColumn1.MaxWidth = 100;
-            this.gridColumn1.MinWidth = 80;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 8;
-            this.gridColumn1.Width = 80;
+            this.col岗位性质.FieldName = "岗位性质";
+            this.col岗位性质.Name = "col岗位性质";
+            this.col岗位性质.Visible = true;
+            this.col岗位性质.VisibleIndex = 7;
             // 
-            // gridColumn2
+            // col借款性质
             // 
-            this.gridColumn2.Caption = "费用类别";
-            this.gridColumn2.MaxWidth = 100;
-            this.gridColumn2.MinWidth = 80;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 9;
-            this.gridColumn2.Width = 80;
+            this.col借款性质.FieldName = "借款性质";
+            this.col借款性质.Name = "col借款性质";
+            this.col借款性质.Visible = true;
+            this.col借款性质.VisibleIndex = 8;
             // 
-            // gridColumn3
+            // col客户类型
             // 
-            this.gridColumn3.Caption = "民族";
-            this.gridColumn3.MaxWidth = 100;
-            this.gridColumn3.MinWidth = 80;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 10;
-            this.gridColumn3.Width = 80;
+            this.col客户类型.FieldName = "客户类型";
+            this.col客户类型.Name = "col客户类型";
+            this.col客户类型.Visible = true;
+            this.col客户类型.VisibleIndex = 9;
             // 
-            // gridColumn4
+            // col费用类别
             // 
-            this.gridColumn4.Caption = "仓库";
-            this.gridColumn4.MaxWidth = 100;
-            this.gridColumn4.MinWidth = 80;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 11;
-            this.gridColumn4.Width = 80;
+            this.col费用类别.FieldName = "费用类别";
+            this.col费用类别.Name = "col费用类别";
+            this.col费用类别.Visible = true;
+            this.col费用类别.VisibleIndex = 10;
             // 
-            // gridColumn5
+            // col民族
             // 
-            this.gridColumn5.Caption = "报销类别";
-            this.gridColumn5.MaxWidth = 100;
-            this.gridColumn5.MinWidth = 80;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 12;
-            this.gridColumn5.Width = 80;
+            this.col民族.FieldName = "民族";
+            this.col民族.Name = "col民族";
+            this.col民族.Visible = true;
+            this.col民族.VisibleIndex = 11;
             // 
-            // gridColumn6
+            // col仓库
             // 
-            this.gridColumn6.Caption = "油气种类";
-            this.gridColumn6.MaxWidth = 100;
-            this.gridColumn6.MinWidth = 80;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 13;
-            this.gridColumn6.Width = 80;
+            this.col仓库.FieldName = "仓库";
+            this.col仓库.Name = "col仓库";
+            this.col仓库.Visible = true;
+            this.col仓库.VisibleIndex = 12;
             // 
-            // gridColumn7
+            // col报销类型
             // 
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 14;
-            this.gridColumn7.Width = 98;
+            this.col报销类型.FieldName = "报销类型";
+            this.col报销类型.Name = "col报销类型";
+            this.col报销类型.Visible = true;
+            this.col报销类型.VisibleIndex = 13;
+            // 
+            // col油气种类
+            // 
+            this.col油气种类.FieldName = "油气种类";
+            this.col油气种类.Name = "col油气种类";
+            this.col油气种类.Visible = true;
+            this.col油气种类.VisibleIndex = 14;
+            // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.Name = "sqlDataSource1";
             // 
             // Basic_Set
             // 
@@ -520,8 +542,8 @@
             this.toolStrip1.PerformLayout();
             this.tabPane1.ResumeLayout(false);
             this.tabNavigationPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -544,16 +566,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private DevExpress.XtraBars.Navigation.TabPane tabPane1;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage1;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
@@ -569,12 +581,24 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
         private System.Windows.Forms.ToolStripMenuItem 自定义数据显示ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 刷新ToolStripMenuItem;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
+        private DevExpress.XtraGrid.Columns.GridColumn col编号;
+        private DevExpress.XtraGrid.Columns.GridColumn col岗位设置;
+        private DevExpress.XtraGrid.Columns.GridColumn col应收账款;
+        private DevExpress.XtraGrid.Columns.GridColumn col应付账款;
+        private DevExpress.XtraGrid.Columns.GridColumn col入库方式;
+        private DevExpress.XtraGrid.Columns.GridColumn col出库方式;
+        private DevExpress.XtraGrid.Columns.GridColumn col运输方式;
+        private DevExpress.XtraGrid.Columns.GridColumn col岗位性质;
+        private DevExpress.XtraGrid.Columns.GridColumn col借款性质;
+        private DevExpress.XtraGrid.Columns.GridColumn col客户类型;
+        private DevExpress.XtraGrid.Columns.GridColumn col费用类别;
+        private DevExpress.XtraGrid.Columns.GridColumn col民族;
+        private DevExpress.XtraGrid.Columns.GridColumn col仓库;
+        private DevExpress.XtraGrid.Columns.GridColumn col报销类型;
+        private DevExpress.XtraGrid.Columns.GridColumn col油气种类;
     }
 }

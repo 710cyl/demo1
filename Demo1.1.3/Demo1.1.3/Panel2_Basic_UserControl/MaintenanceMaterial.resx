@@ -117,7 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="sqlDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>319, 17</value>
+  </metadata>
+  <data name="sqlDataSource2.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxWaWV3IE5hbWU9Iue7tOS/ruadkOaWmSI+PEZpZWxkIE5hbWU9Iue8luWPtyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLpgJ/mn6XnoIEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i57G75YirIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuWQjeensCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLljZXkvY0iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i5aSH5rOoIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  </data>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 17</value>
+  </metadata>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9Iue7tOS/ruadkOaWmSI+PEZpZWxkIE5hbWU9IumUgeeKtuaAgSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLnmbvorrDkuroiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i55m76K6w5pe26Ze0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuS/ruaUueS6uiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLkv67mlLnml7bpl7QiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>42</value>
   </metadata>
 </root>

@@ -117,7 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="sqlDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>319, 17</value>
+  </metadata>
+  <data name="sqlDataSource2.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxWaWV3IE5hbWU9Iui1hOmHkei0puaItyI+PEZpZWxkIE5hbWU9IumUgeeKtuaAgSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLnmbvorrDkuroiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i55m76K6w5pe26Ze0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuS/ruaUueS6uiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLkv67mlLnml7bpl7QiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 17</value>
+  </metadata>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9Iui1hOmHkei0puaItyI+PEZpZWxkIE5hbWU9IumUgeeKtuaAgSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLnmbvorrDkuroiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i55m76K6w5pe26Ze0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuS/ruaUueS6uiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLkv67mlLnml7bpl7QiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="sqlDataSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>491, 17</value>
+  </metadata>
+  <data name="sqlDataSource3.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTMiPjxWaWV3IE5hbWU9Iui1hOmHkei0puaItyI+PEZpZWxkIE5hbWU9Iue8luWPtyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLotKbmiLfmgKfotKgiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i6LSm5oi35ZCN56ewIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuW8gOaIt+ihjCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLotKblj7ciIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i5pyf5Yid5L2Z6aKdIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuaUtuasvuaAu+minSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLku5jmrL7mgLvpop0iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i546w5L2Z6aKdIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuivtOaYjiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
 </root>
