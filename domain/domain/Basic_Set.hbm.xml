@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="domain" namespace="domain">
+  <class name="Basic_Set" table="T_Basic_Set" >
+    
+    <id name="ID" column="ID" type="Guid">
+      <generator class="assigned" />
+    </id>
+
+    <property name="position_Set" type="string">
+      <column name="position_Set" length="50"/>
+    </property>
+
+    <property name="account_Receive" type="double">
+      <column name="account_Receive" precision="2"/>
+    </property>
+
+    <property name="storage_Mode" type="string">
+      <column name="storage_Mode" length="50" />
+    </property>
+
+    <property name="outStorage_Mode" type="string">
+      <column name="outStorage_Mode" length="50" />
+    </property>
+
+    <property name="transportation_Mode" type="string">
+      <column name="transportation_Mode" length="50"/>
+    </property>
+
+    <property name="post_Property" type="string">
+      <column name="post_Property" length="50"/>
+    </property>
+
+    <property name="borrow_Property" type="string">
+      <column name="borrow_Property" length="50"/>
+    </property>
+
+    <property name="customer_Type" type="string">
+      <column name="customer_Type" length="50" />
+    </property>
+
+    <property name ="expense_Category" type="string">
+      <column name="expense_Category" length="50"/>
+    </property>
+
+    <property name="nationality" type="string">
+      <column name="nationality" length="50" />
+    </property>
+
+    <property name="storage" type="string">
+      <column name="storage" length="50"/>
+    </property>
+
+    <property name="refund_Mode" type="string">
+      <column name="refund_Mode" length="50"/>
+    </property>
+
+    <property name="oil_Varirety" type="string">
+      <column name="oil_Varirety" length="50"/>
+    </property>
+
+  </class>
+</hibernate-mapping>
+
