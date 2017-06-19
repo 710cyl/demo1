@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testBasicSet", "testBasicSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wuliu_server", "wuliu_server\wuliu_server.csproj", "{30B8EE1A-19CB-49CF-9987-1B6950E16972}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo1.1.3", "E:\Demo1.1.3\Demo1.1.3\Demo1.1.3.csproj", "{0646B2E6-D6CD-46A3-8D1E-EA88F9135D32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo1.1.3", "Demo1.1.3\Demo1.1.3\Demo1.1.3.csproj", "{0646B2E6-D6CD-46A3-8D1E-EA88F9135D32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

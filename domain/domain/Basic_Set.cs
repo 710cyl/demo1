@@ -23,12 +23,12 @@ namespace domain
         /// <summary>
         /// 应收账款
         /// </summary>
-        public virtual double account_Receive { get; set; }
+        public virtual decimal account_Receive { get; set; }
 
         /// <summary>
         /// 应付账款
         /// </summary>
-        public virtual double account_Pay { get; set; }
+        public virtual decimal account_Pay { get; set; }
 
         /// <summary>
         /// 入库方式

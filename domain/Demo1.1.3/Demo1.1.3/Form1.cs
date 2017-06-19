@@ -1,6 +1,7 @@
 ﻿using Demo1._1._3.Panel1_SystemManagement;
 using Demo1._1._3.Panel2_Basic_UserControl;
 using Demo1._1._3.Panel2_MyWorkBench;
+using Demo1._1._3.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using NHibernate;
+using NHibernate.Cfg;
+using NHibernate.ByteCode.Castle;
+using domain;
+using WebSocketSharp;
+using Basic_SetTest;
+using System.Threading;
+using Newtonsoft.Json;
 namespace Demo1._1._3
 {
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
@@ -160,9 +168,29 @@ namespace Demo1._1._3
             main_basic.Dock = DockStyle.Fill;
             panel2.Controls.Clear();
             panel2.Controls.Add(main_basic);
-
+            domain.Basic_Set basic_set = new domain.Basic_Set();
+            showData<domain.Basic_Set>(basic_set);
         }
 
+        public void showData<T>(T t)
+        {
+            List<T> bs = null;
+            string msg = null;
+            string sendMsg = t.GetType().Name.ToString();
+            using (var ws = new WebSocket("ws://localhost:9000/ShowData"))
+            {
+                ws.Connect();
+                ws.Send(sendMsg);
+                while (msg == null)
+                {
+                    ws.OnMessage += (sender, e) =>
+                    msg = e.Data;
+                }
+                ws.Close();
+                bs = JsonConvert.DeserializeObject<List<T>>(msg);
+                main_basic.gridControl2.DataSource = bs;
+            }
+        }
         private void accordionControlElement36_Click(object sender, EventArgs e)
         {
             internal_fleet = new Internal_Fleet();

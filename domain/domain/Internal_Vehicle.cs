@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 内部车队
 /// </summary>
-    class Internal_Vehicle
+   public class Internal_Vehicle
     {/// <summary>
     /// 编号ID
     /// </summary>

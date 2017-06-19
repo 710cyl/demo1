@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 装卸点档案——卸点
 /// </summary>
-    class discharge
+    class Discharge
     {/// <summary>
     /// 编号
     /// </summary>

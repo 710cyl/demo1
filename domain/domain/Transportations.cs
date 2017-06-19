@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 集运卸点
 /// </summary>
-    class transportations
+    class Transportations
     {
         /// <summary>
         /// 编号

@@ -21,7 +21,7 @@ namespace testBasicSet
         public Form1()
         {
             InitializeComponent();
-            showData();
+            
         }
 
         public void showData()
@@ -32,16 +32,39 @@ namespace testBasicSet
             {
                 ws.Connect();
                 ws.Send("连接成功！！");
-                ws.OnMessage += (sender, e) =>
-                   msg = e.Data;
-                Thread.Sleep(1500);
+                while (msg == null)
+                {
+                    ws.OnMessage += (sender, e) =>
+                    msg = e.Data;
+                }
+
+                //Thread.Sleep(2000);
 
                 //MessageBox.Show(msg);
                 bs = JsonConvert.DeserializeObject<List<Basic_Set>>(msg);
                 gridControl1.DataSource = bs;
 
             }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //s//howData();
+        }
+
+        private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            showData();
+        }
+
+        private void accordionControlElement3_Click(object sender, EventArgs e)
+        {
+            showData();
+        }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+            showData();
         }
     }
 }

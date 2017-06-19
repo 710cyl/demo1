@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 办公用品
 /// </summary>
-    class office_supply
+  public  class Office_Supply
     {
         /// <summary>
         /// 编号ID

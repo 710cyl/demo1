@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Basic_SetDAO.cs" />
     <Compile Include="IBasic_SetDAO.cs" />
+    <Compile Include="IInternal_VehicleDAO.cs" />
+    <Compile Include="Internal_VehicleDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

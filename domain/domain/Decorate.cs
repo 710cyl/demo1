@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 装点
 /// </summary>
-    class decorate
+    class Decorate
     {/// <summary>
     /// 编号
     /// </summary>

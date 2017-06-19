@@ -8,7 +8,7 @@ namespace domain
     /// <summary>
     /// 订单档案
     /// </summary>
-    class Order_File
+  public  class Order_File
     {
         /// <summary>
         /// 订单号

@@ -8,7 +8,7 @@ namespace domain
     /// <summary>
     /// 资金账号
     /// </summary>
-    class Fund_Accounts
+  public  class Fund_Accounts
     {
         /// <summary>
         /// 编号

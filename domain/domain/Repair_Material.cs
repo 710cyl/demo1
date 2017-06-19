@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 维修物料
 /// </summary>
-    class Repair_Material
+  public  class Repair_Material
     {
         /// <summary>
         /// 编号

@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 仓库人员
 /// </summary>
-    class warehouse_staff
+    class Warehouse_Staff
     {
         /// <summary>
         /// 编号ID

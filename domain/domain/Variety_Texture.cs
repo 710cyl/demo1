@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 品种材质
 /// </summary>
-    class variety_texture
+    class Variety_Texture
     {
         /// <summary>
         /// 编号

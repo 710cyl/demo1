@@ -7,7 +7,7 @@ namespace domain
 {/// <summary>
 /// 仓库货位
 /// </summary>
-    class warehouse_space
+    class Warehouse_Space
     {
         /// <summary>
         /// 编号ID
