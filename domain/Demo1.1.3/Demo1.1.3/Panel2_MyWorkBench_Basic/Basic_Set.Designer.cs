@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Basic_Set));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.FindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,10 +58,20 @@
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.打印表单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.页面设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.页面预览ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -84,7 +95,9 @@
             this.toolStripButton3,
             this.toolStripSeparator3,
             this.toolStripDropDownButton2,
-            this.toolStripSeparator5});
+            this.toolStripSeparator5,
+            this.toolStripButton6,
+            this.toolStripButton8});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1673, 27);
@@ -108,7 +121,8 @@
             this.表单详细信息ToolStripMenuItem,
             this.toolStripSeparator12,
             this.自定义数据显示ToolStripMenuItem,
-            this.刷新ToolStripMenuItem});
+            this.刷新ToolStripMenuItem,
+            this.打印表单ToolStripMenuItem});
             this.toolStripDropDownButton1.Image = global::Demo1._1._3.Properties.Resources.suggestion_16x16;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -254,8 +268,9 @@
             this.toolStripButton3.Image = global::Demo1._1._3.Properties.Resources.issue_16x16;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(63, 24);
-            this.toolStripButton3.Text = "发布";
+            this.toolStripButton3.Size = new System.Drawing.Size(93, 24);
+            this.toolStripButton3.Text = "导入数据";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripSeparator3
             // 
@@ -283,6 +298,26 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(73, 24);
+            this.toolStripButton6.Text = "导出数据";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(43, 24);
+            this.toolStripButton8.Text = "复选";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            // 
             // tabPane1
             // 
             this.tabPane1.BackColor = System.Drawing.SystemColors.Control;
@@ -307,7 +342,7 @@
             this.tabNavigationPage1.Controls.Add(this.gridControl2);
             this.tabNavigationPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1651, 639);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1651, 638);
             // 
             // gridControl2
             // 
@@ -317,7 +352,7 @@
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1651, 639);
+            this.gridControl2.Size = new System.Drawing.Size(1651, 638);
             this.gridControl2.TabIndex = 5;
             this.gridControl2.UseEmbeddedNavigator = true;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -326,11 +361,63 @@
             // gridView2
             // 
             this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.IndicatorWidth = 30;
+            this.gridView2.IndicatorWidth = 20;
             this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // pageSetupDialog1
+            // 
+            this.pageSetupDialog1.Document = this.printDocument1;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.Document = this.printDocument1;
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // 打印表单ToolStripMenuItem
+            // 
+            this.打印表单ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.页面设置ToolStripMenuItem,
+            this.页面预览ToolStripMenuItem,
+            this.打印ToolStripMenuItem});
+            this.打印表单ToolStripMenuItem.Name = "打印表单ToolStripMenuItem";
+            this.打印表单ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.打印表单ToolStripMenuItem.Text = "打印表单";
+            // 
+            // 页面设置ToolStripMenuItem
+            // 
+            this.页面设置ToolStripMenuItem.Name = "页面设置ToolStripMenuItem";
+            this.页面设置ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.页面设置ToolStripMenuItem.Text = "页面设置";
+            this.页面设置ToolStripMenuItem.Click += new System.EventHandler(this.页面设置ToolStripMenuItem_Click);
+            // 
+            // 页面预览ToolStripMenuItem
+            // 
+            this.页面预览ToolStripMenuItem.Name = "页面预览ToolStripMenuItem";
+            this.页面预览ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.页面预览ToolStripMenuItem.Text = "页面预览";
+            // 
+            // 打印ToolStripMenuItem
+            // 
+            this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
+            this.打印ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.打印ToolStripMenuItem.Text = "打印";
             // 
             // Basic_Set
             // 
@@ -369,7 +456,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private DevExpress.XtraBars.Navigation.TabPane tabPane1;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
@@ -386,5 +472,16 @@
         private System.Windows.Forms.ToolStripMenuItem 自定义数据显示ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 刷新ToolStripMenuItem;
         public DevExpress.XtraGrid.GridControl gridControl2;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.ToolStripMenuItem 打印表单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 页面设置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 页面预览ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 打印ToolStripMenuItem;
     }
 }

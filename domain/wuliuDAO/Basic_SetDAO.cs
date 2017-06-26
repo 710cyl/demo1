@@ -5,6 +5,7 @@ using System.Text;
 using NHibernate;
 using NHibernate.Linq;
 using domain;
+using Newtonsoft.Json;
 namespace wuliuDAO
 {
     
@@ -68,6 +69,33 @@ namespace wuliuDAO
             using (ISession session = sessionFactory.OpenSession())
             {
                 return session.Query<domain.Basic_Set>().ToList();
+            }
+        }
+
+        public void BatchSave(List<Basic_Set> records)
+        {
+
+            using (ISession session = sessionFactory.OpenSession())
+            {
+                using (ITransaction tran = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.SetBatchSize(50);
+                        foreach (var obj in records)
+                        {
+                            //Basic_Set item = (Basic_Set)obj;
+                            Basic_Set item = (Basic_Set)obj;
+                            session.SaveOrUpdate(item);
+                           session.Flush();
+                        }
+                        tran.Commit();
+                    }
+                    catch (Exception e)
+                    {
+                        tran.Rollback();
+                    }
+                }
             }
         }
     }

@@ -19,5 +19,8 @@ namespace wuliuDAO
         Basic_Set Load(object id);
 
        IList<Basic_Set> LoadALL();
+
+        void BatchSave(List<Basic_Set> record);
+    
     }
 }

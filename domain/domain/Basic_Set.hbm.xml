@@ -11,11 +11,13 @@
     </property>
 
     <property name="account_Receive" type="decimal">
+      <column name="应收账款" length="12"/>
       <column name="应收账款" precision="2"/>
     </property>
 
     <property name="account_Pay" type="decimal">
-      <column name="应收账款" precision="2"/>
+      <column name="应付账款" length="12"/>
+      <column name="应付账款" precision="2"/>
     </property>
       
     <property name="storage_Mode" type="string">

@@ -169,10 +169,13 @@ namespace Demo1._1._3
             panel2.Controls.Clear();
             panel2.Controls.Add(main_basic);
             domain.Basic_Set basic_set = new domain.Basic_Set();
-            showData<domain.Basic_Set>(basic_set);
+            main_basic.gridControl2.DataSource = showData<domain.Basic_Set>(basic_set);
+            main_basic.gridView2.Columns[0].Caption ="编号";
+            main_basic.gridView2.BestFitColumns();
+
         }
 
-        public void showData<T>(T t)
+        public List<T> showData<T>(T t)
         {
             List<T> bs = null;
             string msg = null;
@@ -188,7 +191,8 @@ namespace Demo1._1._3
                 }
                 ws.Close();
                 bs = JsonConvert.DeserializeObject<List<T>>(msg);
-                main_basic.gridControl2.DataSource = bs;
+                return bs;
+             //   main_basic.gridControl2.DataSource = bs;
             }
         }
         private void accordionControlElement36_Click(object sender, EventArgs e)
@@ -263,13 +267,15 @@ namespace Demo1._1._3
             panel2.Controls.Add(mm);
         }
 
-        private void accordionControlElement44_Click(object sender, EventArgs e)
+        private void accordionControlElement44_Click(object sender, EventArgs e) //账户资金
         {
             ca = new CapitalAccount();
             ca.Show();
             ca.Dock = DockStyle.Fill;
             panel2.Controls.Clear();
             panel2.Controls.Add(ca);
+            domain.Fund_Accounts fund_account = new domain.Fund_Accounts();
+            ca.gridControl2.DataSource=showData<domain.Fund_Accounts>(fund_account);     
         }
 
         private void accordionControlElement45_Click(object sender, EventArgs e)
@@ -417,7 +423,5 @@ namespace Demo1._1._3
         }
 
         /*********************************************************************************************************/
-
-
     }
 }

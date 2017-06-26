@@ -24,7 +24,7 @@ namespace Basic_SetTest
         {
             var basic = new domain.Basic_Set
             {
-                ID = Guid.NewGuid()
+              //  ID = Guid.NewGuid()
         };
             var obj = this.basicsetDao.Save(basic);
 
