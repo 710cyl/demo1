@@ -144,6 +144,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FunctionClass.cs" />
     <Compile Include="MyWorkBench_SkipForm\NewBasic.cs">
       <SubType>Form</SubType>
     </Compile>

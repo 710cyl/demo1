@@ -14,7 +14,7 @@ namespace Demo1._1._3.MyWorkBench_SkipForm
     public partial class NewBasic : Form
     {
         domain.Basic_Set bs = new domain.Basic_Set();
-
+        FunctionClass fc = new FunctionClass();
 
         public NewBasic()
         {
@@ -45,37 +45,7 @@ namespace Demo1._1._3.MyWorkBench_SkipForm
 
         }
 
-        //********************
-        //客户端发送数据（新建）
-        //********************
-        public void saveData(domain.Basic_Set bs)
-        {
-            string json;
-            json = JsonConvert.SerializeObject(bs);
-            using (var ws = new WebSocket("ws://localhost:9000/SaveData"))
-            {
-                ws.Connect();
-                ws.Send(json);
-                ws.Close();
-            }
-            
-        }
-        //********************
-        //客户端发送数据（更新）
-        //********************
-        public void updateData(domain.Basic_Set bs)
-        {
-            string json;
-            json = JsonConvert.SerializeObject(bs);
 
-            using (var ws = new WebSocket("ws://localhost:9000/UpdateData"))
-            {
-                ws.Connect();
-                ws.Send(json);
-                ws.Close();
-            }
-
-        }
         //********************
         //按钮“关闭”单击事件
         //********************
@@ -108,7 +78,7 @@ namespace Demo1._1._3.MyWorkBench_SkipForm
                 bs.refund_Mode = textBox_refund_Mode.Text;
                 bs.oil_Varirety = textBox_oil_Varirety.Text;
 
-                updateData(bs);
+                fc.updateData(bs);
             }
             else
             {
@@ -128,7 +98,7 @@ namespace Demo1._1._3.MyWorkBench_SkipForm
                 bs.refund_Mode = textBox_refund_Mode.Text;
                 bs.oil_Varirety = textBox_oil_Varirety.Text;
 
-                saveData(bs);
+                fc.saveData(bs);
             }
 
             Close();
