@@ -46,6 +46,10 @@
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.自定义数据显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打印表单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.页面设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.页面预览ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -64,14 +68,11 @@
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dataNavigator_Basic_Set = new DevExpress.XtraEditors.DataNavigator();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.打印表单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.页面设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.页面预览ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -214,6 +215,37 @@
             this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.刷新ToolStripMenuItem.Text = "刷新";
             // 
+            // 打印表单ToolStripMenuItem
+            // 
+            this.打印表单ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.页面设置ToolStripMenuItem,
+            this.页面预览ToolStripMenuItem,
+            this.打印ToolStripMenuItem});
+            this.打印表单ToolStripMenuItem.Name = "打印表单ToolStripMenuItem";
+            this.打印表单ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.打印表单ToolStripMenuItem.Text = "打印表单";
+            // 
+            // 页面设置ToolStripMenuItem
+            // 
+            this.页面设置ToolStripMenuItem.Name = "页面设置ToolStripMenuItem";
+            this.页面设置ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.页面设置ToolStripMenuItem.Text = "页面设置";
+            this.页面设置ToolStripMenuItem.Click += new System.EventHandler(this.页面设置ToolStripMenuItem_Click);
+            // 
+            // 页面预览ToolStripMenuItem
+            // 
+            this.页面预览ToolStripMenuItem.Name = "页面预览ToolStripMenuItem";
+            this.页面预览ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.页面预览ToolStripMenuItem.Text = "页面预览";
+            this.页面预览ToolStripMenuItem.Click += new System.EventHandler(this.页面预览ToolStripMenuItem_Click_1);
+            // 
+            // 打印ToolStripMenuItem
+            // 
+            this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
+            this.打印ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.打印ToolStripMenuItem.Text = "打印";
+            this.打印ToolStripMenuItem.Click += new System.EventHandler(this.打印ToolStripMenuItem_Click_1);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -248,6 +280,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(63, 24);
             this.toolStripButton2.Text = "修改";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton4
             // 
@@ -340,6 +373,7 @@
             this.tabNavigationPage1.Appearance.Options.UseBackColor = true;
             this.tabNavigationPage1.Caption = "基础档案";
             this.tabNavigationPage1.Controls.Add(this.gridControl2);
+            this.tabNavigationPage1.Controls.Add(this.dataNavigator_Basic_Set);
             this.tabNavigationPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
             this.tabNavigationPage1.Size = new System.Drawing.Size(1651, 638);
@@ -352,9 +386,8 @@
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1651, 638);
+            this.gridControl2.Size = new System.Drawing.Size(1651, 612);
             this.gridControl2.TabIndex = 5;
-            this.gridControl2.UseEmbeddedNavigator = true;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -365,6 +398,49 @@
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // dataNavigator_Basic_Set
+            // 
+            this.dataNavigator_Basic_Set.Appearance.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataNavigator_Basic_Set.Appearance.Options.UseBackColor = true;
+            this.dataNavigator_Basic_Set.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.dataNavigator_Basic_Set.Buttons.Append.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.Append.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.CancelEdit.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.CancelEdit.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.EnabledAutoRepeat = false;
+            this.dataNavigator_Basic_Set.Buttons.EndEdit.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.EndEdit.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.First.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.First.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.Last.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.Last.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.Next.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.Next.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.NextPage.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.NextPage.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.Prev.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.Prev.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.PrevPage.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.PrevPage.Visible = false;
+            this.dataNavigator_Basic_Set.Buttons.Remove.Enabled = false;
+            this.dataNavigator_Basic_Set.Buttons.Remove.Visible = false;
+            this.dataNavigator_Basic_Set.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.dataNavigator_Basic_Set.CustomButtons.AddRange(new DevExpress.XtraEditors.NavigatorCustomButton[] {
+            new DevExpress.XtraEditors.NavigatorCustomButton(-1, 0, true, true, "首页", "首页"),
+            new DevExpress.XtraEditors.NavigatorCustomButton(-1, 1, true, true, "上一页", "上一页"),
+            new DevExpress.XtraEditors.NavigatorCustomButton(-1, 4, true, true, "下一页", "下一页"),
+            new DevExpress.XtraEditors.NavigatorCustomButton(-1, 5, true, true, "尾页", "尾页")});
+            this.dataNavigator_Basic_Set.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataNavigator_Basic_Set.Location = new System.Drawing.Point(0, 612);
+            this.dataNavigator_Basic_Set.Name = "dataNavigator_Basic_Set";
+            this.dataNavigator_Basic_Set.ShowToolTips = true;
+            this.dataNavigator_Basic_Set.Size = new System.Drawing.Size(1651, 26);
+            this.dataNavigator_Basic_Set.TabIndex = 6;
+            this.dataNavigator_Basic_Set.Text = "dataNavigator1";
+            this.dataNavigator_Basic_Set.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.Begin;
+            this.dataNavigator_Basic_Set.TextStringFormat = "第 {0}页，共 {1}页";
+            this.dataNavigator_Basic_Set.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.dataNavigator_Basic_Set_ButtonClick);
             // 
             // printDocument1
             // 
@@ -389,35 +465,6 @@
             // 
             this.printDialog1.Document = this.printDocument1;
             this.printDialog1.UseEXDialog = true;
-            // 
-            // 打印表单ToolStripMenuItem
-            // 
-            this.打印表单ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.页面设置ToolStripMenuItem,
-            this.页面预览ToolStripMenuItem,
-            this.打印ToolStripMenuItem});
-            this.打印表单ToolStripMenuItem.Name = "打印表单ToolStripMenuItem";
-            this.打印表单ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
-            this.打印表单ToolStripMenuItem.Text = "打印表单";
-            // 
-            // 页面设置ToolStripMenuItem
-            // 
-            this.页面设置ToolStripMenuItem.Name = "页面设置ToolStripMenuItem";
-            this.页面设置ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.页面设置ToolStripMenuItem.Text = "页面设置";
-            this.页面设置ToolStripMenuItem.Click += new System.EventHandler(this.页面设置ToolStripMenuItem_Click);
-            // 
-            // 页面预览ToolStripMenuItem
-            // 
-            this.页面预览ToolStripMenuItem.Name = "页面预览ToolStripMenuItem";
-            this.页面预览ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.页面预览ToolStripMenuItem.Text = "页面预览";
-            // 
-            // 打印ToolStripMenuItem
-            // 
-            this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
-            this.打印ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.打印ToolStripMenuItem.Text = "打印";
             // 
             // Basic_Set
             // 
@@ -483,5 +530,6 @@
         private System.Windows.Forms.ToolStripMenuItem 页面设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 页面预览ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打印ToolStripMenuItem;
+        public DevExpress.XtraEditors.DataNavigator dataNavigator_Basic_Set;
     }
 }

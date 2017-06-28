@@ -23,11 +23,22 @@ namespace wuliu_server
             wssv.AddWebSocketService<DeleteData>("/DeleteData");
             wssv.AddWebSocketService<BatchSave>("/BatchSave");
             wssv.AddWebSocketService<SaveData>("/SaveData");
+            wssv.AddWebSocketService<GetCount>("/GetCount");
+            wssv.AddWebSocketService<NowPage>("/NowPage");
             wssv.Start();
             Console.ReadKey();
             wssv.Stop();
 
 
+        }
+    }
+
+    public class NowPage : WebSocketBehavior
+    {
+        public static string nowpage;
+        protected override void OnMessage(MessageEventArgs e)
+        {
+            nowpage = e.Data;   
         }
     }
     public class ShowData :WebSocketBehavior
@@ -56,11 +67,14 @@ namespace wuliu_server
             }
         }
 
+ 
        public string SwitchData(ISession session,string s)
         {
             if (s == "Basic_Set")
             {
-               IList<Basic_Set> basic_set = session.QueryOver<Basic_Set>().Skip(0).Take(50).List();
+               // NowPage np = new NowPage();
+                int page = Convert.ToInt32(NowPage.nowpage);
+               IList<Basic_Set> basic_set = session.QueryOver<Basic_Set>().Skip((page-1)*50).Take(50).List();
                 string json = JsonConvert.SerializeObject(basic_set);
                 return json;
             }
@@ -77,6 +91,39 @@ namespace wuliu_server
         }
     }
 
+
+    public class GetCount : WebSocketBehavior
+    {
+        protected override void OnMessage(MessageEventArgs e)
+        {
+            var cfg = new NHibernate.Cfg.Configuration().Configure("Config/hibernate.cfg.xml");
+            using (ISessionFactory sessionFactory = cfg.BuildSessionFactory())
+            {
+                try
+                {
+                    ISession session = sessionFactory.OpenSession();
+                    long total = CountSwitch(e.Data,session);
+                    Send(total.ToString());
+                }
+                catch (Exception)
+                {
+                    throw;
+                }              
+            }
+        }
+
+        public long CountSwitch(string className,ISession session)
+        {
+            long total = 0;
+            if (className == "Basic_Set")
+            {
+                total = session.QueryOver<Basic_Set>().RowCountInt64();
+
+                return total;
+            }
+            return total;
+        }
+    }
     //*****************
     //服务器保存数据
     //*****************
@@ -99,8 +146,9 @@ namespace wuliu_server
         protected override void OnMessage(MessageEventArgs e)
         {
             Basic_SetDAO bs = new Basic_SetDAO();
-            string ID = string.Empty;
-            ID = e.Data;
+            // string ID = string.Empty;
+            Guid ID = new Guid(e.Data);
+            //ID = e.Data;
             var basicset = bs.Get(ID);
             bs.Delete(basicset);
         }

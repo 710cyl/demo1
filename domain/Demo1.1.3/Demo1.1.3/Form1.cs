@@ -169,13 +169,14 @@ namespace Demo1._1._3
             panel2.Controls.Clear();
             panel2.Controls.Add(main_basic);
             domain.Basic_Set basic_set = new domain.Basic_Set();
-            main_basic.gridControl2.DataSource = showData<domain.Basic_Set>(basic_set);
+            Basic_Set dbs = new Basic_Set();
+            main_basic.gridControl2.DataSource = showData<domain.Basic_Set>(basic_set, dbs.now_Page.ToString());
             main_basic.gridView2.Columns[0].Caption ="编号";
             main_basic.gridView2.BestFitColumns();
 
         }
 
-        public List<T> showData<T>(T t)
+        public List<T> showData<T>(T t,string nowpage)
         {
             List<T> bs = null;
             string msg = null;
@@ -184,16 +185,22 @@ namespace Demo1._1._3
             {
                 ws.Connect();
                 ws.Send(sendMsg);
-                while (msg == null)
+                using (var wsp = new WebSocket("ws://localhost:9000/NowPage"))
                 {
-                    ws.OnMessage += (sender, e) =>
-                    msg = e.Data;
+                    wsp.Connect();
+                    wsp.Send(nowpage);
+                    wsp.Close();
                 }
+                    while (msg == null)
+                    {
+                        ws.OnMessage += (sender, e) =>
+                        msg = e.Data;
+                    }
                 ws.Close();
                 bs = JsonConvert.DeserializeObject<List<T>>(msg);
-                return bs;
              //   main_basic.gridControl2.DataSource = bs;
             }
+            return bs;
         }
         private void accordionControlElement36_Click(object sender, EventArgs e)
         {
@@ -275,7 +282,7 @@ namespace Demo1._1._3
             panel2.Controls.Clear();
             panel2.Controls.Add(ca);
             domain.Fund_Accounts fund_account = new domain.Fund_Accounts();
-            ca.gridControl2.DataSource=showData<domain.Fund_Accounts>(fund_account);     
+            //ca.gridControl2.DataSource=showData<domain.Fund_Accounts>(fund_account);     
         }
 
         private void accordionControlElement45_Click(object sender, EventArgs e)

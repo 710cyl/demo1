@@ -57,6 +57,7 @@ namespace Demo1._1._3.MyWorkBench_SkipForm
         {
 
             bs.ID = new Guid();
+
             bs.position_Set = textBox_position_Set.Text;
             bs.account_Receive = Convert.ToDecimal(textBox_account_Receive.Text);
             bs.account_Pay = Convert.ToDecimal(textBox_account_Pay.Text);

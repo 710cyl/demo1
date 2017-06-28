@@ -191,5 +191,109 @@
       <column name="备注" length="50"/>
     </property>
   </class>
+
+<class name="Transportations" table="T_Transportations" >
+
+    <id name="ID" column="ID" type="Guid">
+      <generator class="assigned" />
+    </id>
+
+    <property name="transportation_place" type="string">
+      <column name="transportation_place" length="50"/>
+    </property>
+
+    <property name="city" type="string">
+      <column name="city" length="50"/>
+    </property>
+
+    <property name="region" type="string">
+      <column name="region" length="50" />
+    </property>
+
+    <property name="statement" type="string">
+      <column name="statement" length="50" />
+    </property>
+
+    <property name="linkman" type="string">
+      <column name="linkman" length="50"/>
+    </property>
+
+    <property name="phone_number" type="string">
+      <column name="phone_number" length="50"/>
+    </property>
+
+    <property name="adress" type="string">
+      <column name="adress" length="50"/>
+    </property>
+
+  </class>
+
+ <class name="Variety_Texture" table="T_Variety_Texture" >
+
+    <id name="ID" column="ID" type="Guid">
+      <generator class="assigned" />
+    </id>
+
+    <property name="variety" type="string">
+      <column name="variety" length="50"/>
+    </property>
+
+    <property name="texture" type="string">
+      <column name="texture" length="50"/>
+    </property>
+
+    <property name="statement" type="string">
+      <column name="statement" length="50" />
+    </property>
+
+  </class>
+
+<class name="Warehouse_Space" table="T_Warehouse_Space" >
+
+    <id name="ID" column="ID" type="Guid">
+      <generator class="assigned" />
+    </id>
+
+    <property name="storage" type="string">
+      <column name="storage" length="50"/>
+    </property>
+
+    <property name="crib_number" type="string">
+      <column name="crib_number" length="50"/>
+    </property>
+
+    <property name="statement" type="string">
+      <column name="statement" length="50" />
+    </property>
+
+  </class>
+
+<class name="Warehouse_Staff" table="T_Warehouse_Staff" >
+
+    <id name="ID" column="ID" type="Guid">
+      <generator class="assigned" />
+    </id>
+
+    <property name="inventory_keeper" type="string">
+      <column name="inventory_keeper" length="50"/>
+    </property>
+
+    <property name="crane" type="string">
+      <column name="crane" length="50"/>
+    </property>
+
+    <property name="loader" type="string">
+      <column name="loader" length="50" />
+    </property>
+
+    <property name="other" type="string">
+      <column name="other" length="50" />
+    </property>
+
+    <property name="statement" type="string">
+      <column name="statement" length="50"/>
+    </property>
+
+  </class>
 </hibernate-mapping>
 
