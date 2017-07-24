@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="domain" namespace="domain">
+  <class name="Charter_Fee_Detail" table="T_Charter_Fee_Detail" >
+      <id name="one_bill_ID" column="车单号" type="Guid">
+    <generator class="assigned" />
+  </id>
+
+    <property name="motorcade" type="string">
+      <column name="车队" length="50"/>
+    </property>
+
+    <property name="car_ID" type="string">
+      <column name="车号" length="50"/>
+    </property>
+
+    <property name="driver" type="string">
+      <column name="司机" length="50"/>
+    </property>
+
+    <property name="transportation_volume" type="decimal">
+      <column name="运输量" length="20"/>
+      <column name="运输量" precision="3"/>
+    </property>
+
+    <property name="transportation_production" type="decimal">
+      <column name="运输产值" length="20"/>
+      <column name="运输产值" precision="3"/>
+    </property>
+
+    <property name="Consolidation_volume" type="decimal">
+      <column name="集运量" length="20"/>
+      <column name="集运量" precision="3"/>
+    </property>
+
+    <property name="Consolidation_production" type="decimal">
+      <column name="集运产值" length="20"/>
+      <column name="集运产值" precision="3"/>
+    </property>
+
+    <property name="driver_ratio" type="decimal">
+      <column name="司机比例" length="20"/>
+      <column name="司机比例" precision="3"/>
+    </property>
+
+    <property name="package_fare" type="decimal">
+      <column name="包车费" length="20"/>
+      <column name="包车费" precision="3"/>
+    </property>
+
+    <property name="remark" type="string">
+      <column name="备注" length="50"/>
+    </property>
+    
+    <property name="fee_month" type="string">
+      <column name="扣费月份" length="50"/>
+    </property>
+
+    <property name="accounting_date" type="DateTime">
+      <column name="记账日期"/>
+    </property>
+
+    <property name="motorcade_logo" type="string">
+      <column name="车队标识" length="50"/>
+    </property>
+    
+    <property name="inputer" type="string">
+      <column name="录入人" length="50" />
+    </property>
+
+    <property name="mender" type="string">
+      <column name="修改人" length="50" />
+    </property>
+
+    <property name="modification_time" type="DateTime">
+      <column name="修改时间"/>
+    </property>
+
+    <property name="deadline" type="DateTime">
+      <column name="截止时间"/>
+    </property>
+
+    <property name="bill_ID" type="string">
+      <column name="扣费单号" length="50"/>
+    </property>
+    
+
+
+  </class>
+</hibernate-mapping>

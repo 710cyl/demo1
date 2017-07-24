@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="domain" namespace="domain">
+<class name="Charter_Fee_Main" table="T_Charter_Fee_Main" >
+
+  <id name="bill_ID" column="扣费单号" type="string" length="50">
+    <generator class="assigned" />
+  </id>
+
+  <property name="fee_month" type="string">
+    <column name="扣费月份" length="50"/>
+  </property>
+
+  <property name="accounting_date" type="DateTime">
+    <column name="记账日期"/>
+  </property>
+
+  <property name="start_time" type="DateTime">
+    <column name="开始时间"/>
+  </property>
+
+  <property name="inputer" type="string">
+    <column name="录入人" length="50" />
+  </property>
+
+  <property name="input_time" type="DateTime">
+    <column name="录入时间"  />
+  </property>
+
+  <property name="mender" type="string">
+    <column name="修改人" length="50" />
+  </property>
+
+  <property name="modification_time" type="DateTime">
+    <column name="修改时间"/>
+  </property>
+
+  <property name="deadline" type="DateTime">
+    <column name="截止时间"/>
+  </property>
+  
+  <bag name="cfd">
+    <key column="扣费单号"/>
+    <one-to-many class="Charter_Fee_Detail"/>
+   </bag>
+
+</class>
+</hibernate-mapping>
