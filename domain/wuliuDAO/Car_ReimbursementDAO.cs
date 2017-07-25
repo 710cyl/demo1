@@ -84,7 +84,6 @@ namespace wuliuDAO
                         session.SetBatchSize(50);
                         foreach (var obj in records)
                         {
-                            //Car_Reimbursement item = (Car_Reimbursement)obj;
                             Car_Reimbursement item = (Car_Reimbursement)obj;
                             session.SaveOrUpdate(item);
                             session.Flush();
